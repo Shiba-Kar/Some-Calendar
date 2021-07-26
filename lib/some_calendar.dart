@@ -167,7 +167,7 @@ class SomeCalendarState extends State<SomeCalendar> {
       if (selectedDates == null) {
         firstRangeDate = Jiffy(DateTime(now.year, now.month, now.day)).dateTime;
         endRangeDate =
-            Jiffy(DateTime(now.year, now.month, now.day)).add(days: 2);
+            Jiffy(DateTime(now.year, now.month, now.day)).add(days: 2).dateTime;
       } else {
         DateTime dateRange = now;
         if (selectedDates.length > 0) {
@@ -181,14 +181,16 @@ class SomeCalendarState extends State<SomeCalendar> {
           } else {
             firstRangeDate =
                 Jiffy(DateTime(now.year, now.month, now.day)).dateTime;
-            endRangeDate =
-                Jiffy(DateTime(now.year, now.month, now.day)).add(days: 2);
+            endRangeDate = Jiffy(DateTime(now.year, now.month, now.day))
+                .add(days: 2)
+                .dateTime;
           }
         } else {
           firstRangeDate =
               Jiffy(DateTime(now.year, now.month, now.day)).dateTime;
-          endRangeDate =
-              Jiffy(DateTime(now.year, now.month, now.day)).add(days: 2);
+          endRangeDate = Jiffy(DateTime(now.year, now.month, now.day))
+              .add(days: 2)
+              .dateTime;
         }
       }
 
@@ -211,7 +213,7 @@ class SomeCalendarState extends State<SomeCalendar> {
         selectedDates.clear();
         for (int i = 0; i < diff; i++) {
           selectedDates.add(date);
-          date = Jiffy(date).add(days: 1);
+          date = Jiffy(date).add(days: 1).dateTime;
         }
       }
     } else {
@@ -353,7 +355,7 @@ class SomeCalendarState extends State<SomeCalendar> {
     var date = firstRangeDate;
     for (int i = 0; i < diff; i++) {
       selectedDates.add(date);
-      date = Jiffy(date).add(days: 1);
+      date = Jiffy(date).add(days: 1).dateTime;
     }
   }
 
@@ -375,7 +377,7 @@ class SomeCalendarState extends State<SomeCalendar> {
       var start = Jiffy(DateTime(lastDate.year, lastDate.month))
         ..subtract(months: 1);
       pageStartDate = start.dateTime;
-      pageEndDate = Jiffy(lastDate).subtract(days: 1);
+      pageEndDate = Jiffy(lastDate).subtract(days: 1).dateTime;
     } else {
       var firstDateOfCurrentMonth =
           Jiffy(DateTime(startDate.year, startDate.month))

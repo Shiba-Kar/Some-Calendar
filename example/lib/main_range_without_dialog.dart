@@ -31,8 +31,8 @@ class _MainRangeWithoutDialogState extends State<MainRangeWithoutDialog> {
                   mode: SomeMode.Range,
                   isWithoutDialog: true,
                   selectedDates: selectedDates,
-                  startDate: Jiffy().subtract(years: 3),
-                  lastDate: Jiffy().add(months: 9),
+                  startDate: Jiffy().subtract(years: 3).dateTime,
+                  lastDate: Jiffy().add(months: 9).dateTime,
                   done: (date) {
                     setState(() {
                       selectedDates = date;

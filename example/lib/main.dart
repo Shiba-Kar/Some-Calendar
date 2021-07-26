@@ -102,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 isWithoutDialog: false,
                                 selectedDate: selectedDate,
                                 startDate: new DateTime(2020, 6, 28),
-                                lastDate: Jiffy().add(months: 9),
+                                lastDate: Jiffy().add(months: 9).dateTime,
                                 done: (date) {
                                   setState(() {
                                     selectedDate = date;
@@ -120,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           builder: (_) => SomeCalendar(
                                 mode: SomeMode.Multi,
                                 startDate: DateTime.now(),
-                                lastDate: Jiffy().add(days: 7),
+                                lastDate: Jiffy().add(days: 7).dateTime,
                                 isWithoutDialog: false,
                                 selectedDates: selectedDates,
                                 maxDatesToSelect: 1,
@@ -153,8 +153,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                   dialogRangeLastDate: 'Tanggal Terakhir',
                                 ),
                                 primaryColor: Color(0xff5833A5),
-                                startDate: Jiffy().subtract(years: 3),
-                                lastDate: Jiffy().add(months: 9),
+                                startDate: Jiffy().subtract(years: 3).dateTime,
+                                lastDate: Jiffy().add(months: 9).dateTime,
                                 selectedDates: selectedDates,
                                 isWithoutDialog: false,
                                 done: (date) {

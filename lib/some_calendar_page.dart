@@ -96,7 +96,7 @@ class _SomeCalendarPageState extends State<SomeCalendarPage> {
       DateTime rowStartDate, DateTime rowEndDate, int position) {
     List<Widget> items = [];
     DateTime currentDate = rowStartDate;
-    rowEndDate = Jiffy(rowEndDate).add(days: 1);
+    rowEndDate = Jiffy(rowEndDate).add(days: 1).dateTime;
     startDayOffset = 0;
     if (position == 1) {
       for (int i = 0; i < 7; i++) {
