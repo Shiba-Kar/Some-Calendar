@@ -414,7 +414,9 @@ class SomeCalendarState extends State<SomeCalendar> {
             child: ListView(
               shrinkWrap: true,
               children: <Widget>[
-                Container(height: heightContainer.toDouble(), child: pageView),
+                Container(
+                    height: heightContainer.toDouble(),
+                    child: Scrollbar(child: pageView)),
               ],
             ),
           ),
