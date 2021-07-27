@@ -392,7 +392,7 @@ class SomeCalendarState extends State<SomeCalendar> {
   }
 
   withoutDialog() {
-    var heightContainer = mode == SomeMode.Range ? 55 * 6 : 55 * 6;
+    var heightContainer = mode == SomeMode.Range ? 55 * 6 : 55 * 4.1;
     return Container(
       height: heightContainer.toDouble(),
       width: MediaQuery.of(context).size.width,

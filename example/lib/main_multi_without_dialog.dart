@@ -28,7 +28,7 @@ class _MainMultiWithoutDialogState extends State<MainMultiWithoutDialog> {
                 padding: EdgeInsets.all(18),
                 child: SomeCalendar(
                   primaryColor: Color(0xff5833A5),
-                  scrollDirection: Axis.horizontal,
+                  scrollDirection: Axis.vertical,
                   mode: SomeMode.Multi,
                   isWithoutDialog: true,
                   selectedDates: selectedDates,
