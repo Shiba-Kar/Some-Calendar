@@ -416,7 +416,10 @@ class SomeCalendarState extends State<SomeCalendar> {
               children: <Widget>[
                 Container(
                     height: heightContainer.toDouble(),
-                    child: Scrollbar(child: pageView)),
+                    child: Scrollbar(
+                        showTrackOnHover: true,
+                        isAlwaysShown: true,
+                        child: pageView)),
               ],
             ),
           ),
